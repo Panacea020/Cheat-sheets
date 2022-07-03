@@ -1,0 +1,20 @@
+CREATING A Jupter environment
+
+1. To create where you want to develop your project or app: mkdir foldername
+2. Create a virtual environment : py -m venv EnviromentName
+3. Activate the environment by typing : .\EnvironmentName\Scripts\activate
+4. install required libraries
+	pip install pandas
+	pip install plotly==5.0.0
+	pip install dash==1.20.0
+NB	pip install jupyter-dash
+	pip install matplotlib
+	pip install seaborn
+	pip install fastai
+
+	pip install transforms
+	
+	pip install "notebook>=5.3" "ipywidgets>=7.5"
+5. To check full list of all installed libraries : pip list
+6.To start the jupyter notebook type: jupyter notebook
+and run app

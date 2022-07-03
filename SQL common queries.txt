@@ -1,0 +1,84 @@
+ COMMON SQL QUERY COMMANDS Examples
+
+1) TO search if there are any colomn contains null values
+
+SELECT
+  *
+FROM
+  cars.car_info
+WHERE
+  num_of_doors IS NULL
+
+
+2) TO update  information in the data base
+
+UPDATE
+  cars.car_info
+SET
+  num_of_doors ="four"
+WHERE
+  make="mazda"
+  AND fuel_type="diesel"
+  AND body_style="sedan";
+
+3) TO INSPECT if length colomn is falling within range
+
+SELECT
+  MIN(length) AS min_length,
+  MAX(length) AS max_length,
+FROM
+  cars.car_info
+
+4) TO CHECK if the data has unique values
+
+SELECT
+  DISTINCT fuel_type
+FROM
+  cars.car_info
+
+5) TO check the number of the rows with a mistake
+
+SELECT
+  COUNT(*) AS 
+  num_of_rows_to_delete
+FROM
+  cars.car_info
+WHERE
+  compression_ratio=70
+
+6) TO DELETE the rows with a mistake
+DELETE cars.car_info
+WHERE compression_ratio = 70;
+
+7) To ensure consistency
+SELECT
+  DISTINCT drive_wheels,
+  LENGTH(drive_wheels) AS string_length
+FROM
+  cars.car_info;
+8) To remove extra spaces 
+UPDATE
+
+  cars.car_info
+
+SET
+
+  drive_wheels = TRIM(drive_wheels)
+
+WHERE TRUE;
+9) To sort data
+SELECT 
+DISTINCT name
+FROM
+playlist
+ORDER BY
+playlist_id
+
+10) to add a new column in this case new state to be abbreviated by the first 3 digits
+SELECT
+customer_id,
+SUBSTR(state,1,2) as new_state
+FROM
+customer
+ORDER BY
+state DESC
